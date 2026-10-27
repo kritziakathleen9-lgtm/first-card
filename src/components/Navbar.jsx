@@ -1,18 +1,20 @@
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <header className="navbar">
       <a className="navbar-logo" href="#inicio">
-        <span className="logo-icono">♥</span>
-        <span>Primeras Cartas</span>
+        <span className="navbar-huella">♥</span>
+        <span>Mi mundo de cuatro patas</span>
       </a>
 
-      <div className="navbar-enlaces">
+      <nav className="navbar-enlaces" aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
-        <a href="#mascotas">Mascotas</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </nav>
+        <a href="#mascotas">Mis mascotas</a>
+        <a className="navbar-destacado" href="#nosotros">
+          Sobre nosotros <span>♥</span>
+        </a>
+      </nav>
+    </header>
   );
 }
 
