@@ -1,38 +1,117 @@
+
 .contenedor-tarjeta {
-    width: 1170px;
-    height: 368px;
-    margin: 10px 10px 50px;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 280px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+    align-items: stretch;
+    overflow: hidden;
+
+    background: #fffdf9;
+    border: 1px solid #e5e5dc;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(48, 57, 45, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
+/* EFECTO AL PASAR EL RATÓN */
+.contenedor-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(48, 57, 45, 0.15);
+}
+
+/* IMAGEN */
 .imagen-tarjeta {
-    height: 100%;
-    width: auto;
+    width: 35%;
+    min-width: 0;
+    min-height: 280px;
+    object-fit: cover;
+    display: block;
 }
 
+/* TEXTO */
 .contenedor-texto-tarjeta {
-    text-align: center;
-    padding: 40px;
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     font-family: Lato, sans-serif;
     font-weight: 400;
-    line-height: 1.5em;
+    line-height: 1.7;
+    color: #45483f;
 }
 
+/* NOMBRE */
 .nombre-tarjeta {
-    font-size: 1.3rem;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #435b49;
 }
 
+/* TIPO */
 .tipo-tarjeta {
-    font-size: 1.3rem;
-    margin-top: 15px;
-    padding-bottom: 30px;
+    margin-top: 8px;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #a47760;
 }
 
+/* DESCRIPCIÓN */
 .texto-tarjeta {
-    font-size: 1.1rem;
-    text-align: justify;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+    .imagen-tarjeta {
+        width: 38%;
+    }
+
+    .contenedor-texto-tarjeta {
+        padding: 18px;
+    }
+
+    .nombre-tarjeta {
+        font-size: 1.25rem;
+    }
+
+    .texto-tarjeta {
+        font-size: 0.88rem;
+    }
+}
+
+/* MÓVILES */
+@media (max-width: 480px) {
+    .contenedor-tarjeta {
+        flex-direction: column;
+        min-height: auto;
+        border-radius: 15px;
+    }
+
+    .imagen-tarjeta {
+        width: 100%;
+        height: 230px;
+        min-height: 0;
+    }
+
+    .contenedor-texto-tarjeta {
+        padding: 22px;
+    }
+
+    .nombre-tarjeta {
+        font-size: 1.4rem;
+    }
+
+    .texto-tarjeta {
+        font-size: 0.95rem;
+    }
 }

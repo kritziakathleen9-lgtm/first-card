@@ -1,0 +1,27 @@
+
+/* FONDO GENERAL */
+.App {
+    min-height: 100vh;
+    padding: 35px 20px;
+    background: linear-gradient(
+        135deg,
+        #f7f5f0,
+        #e9eee5
+    );
+}
+
+/* CONTENEDOR DE TARJETAS */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+@media (max-width: 600px) {
+    .App {
+        padding: 20px 12px;
+        gap: 20px;
+    }
+}
